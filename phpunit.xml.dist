@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         cacheResultFile="build/cache/.phpunit.result.cache"
+         cacheResult="true"
+         executionOrder="random"
+         beStrictAboutOutputDuringTests="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         backupGlobals="false"
+         colors="true"
+>
+  <php>
+    <ini name="display_errors" value="1" />
+    <ini name="error_reporting" value="-1" />
+    <server name="APP_ENV" value="test" force="true" />
+    <server name="SHELL_VERBOSITY" value="-1" />
+    <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
+    <server name="SYMFONY_PHPUNIT_VERSION" value="9.5" />
+
+        <!-- ###+ symfony/framework-bundle ### -->
+        <env name="APP_ENV" value="dev"/>
+        <env name="APP_SECRET" value="d0e620e5cb59bd366b7970e9f0a20788"/>
+        <!-- ###- symfony/framework-bundle ### -->
+
+        <!-- ###+ symfony/messenger ### -->
+        <!-- Choose one of the transports below -->
+        <!-- MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages -->
+        <!-- MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages -->
+        <env name="MESSENGER_TRANSPORT_DSN" value="doctrine://default?auto_setup=0"/>
+        <!-- ###- symfony/messenger ### -->
+  </php>
+  <testsuites>
+    <testsuite name="Symfony App Unit Test Suite">
+      <directory suffix="Test.php">tests/src/Unit</directory>
+    </testsuite>
+  </testsuites>
+
+  <source restrictDeprecations="true" restrictNotices="true" restrictWarnings="true">
+    <include>
+      <directory suffix=".php">app/src</directory>
+    </include>
+  </source>
+  <coverage includeUncoveredFiles="true" pathCoverage="true">
+    <report>
+      <clover outputFile="build/coverage/clover.xml"/>
+      <text outputFile="build/coverage/coverage.txt" showUncoveredFiles="true" showOnlySummary="false"/>
+      <xml outputDirectory="build/coverage/coverage-xml" />
+    </report>
+  </coverage>
+</phpunit>

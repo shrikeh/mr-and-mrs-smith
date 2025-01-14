@@ -1,0 +1,20 @@
+{
+  "$schema": "vendor/infection/infection/resources/schema.json",
+  "source": {
+    "directories": [
+      "app/src"
+    ],
+    "excludes": [
+      "DependencyInjection"
+    ]
+  },
+  "logs": {
+    "text": "build/logs/infection.log",
+    "stryker": {
+      "report": "main"
+    }
+  },
+  "mutators": {
+    "@default": true
+  }
+}

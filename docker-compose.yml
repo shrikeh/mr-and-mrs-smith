@@ -1,0 +1,15 @@
+---
+services:
+  app:
+    container_name: shrikeh
+    build:
+      context: ./
+      dockerfile: dev/docker/services/app/Dockerfile
+      target: app
+      args:
+        - "PHP_IMAGE_APP_VERSION=8.3.14-cli-bookworm"
+        - "GITHUB_OAUTH=${GITHUB_OAUTH?err}"
+    ports:
+      - target: 8080
+        published: 9901
+        protocol: tcp

@@ -1,0 +1,31 @@
+{
+  "$schema":"./vendor/phpbench/phpbench/phpbench.schema.json",
+  "runner.bootstrap": "tests/bootstrap.php",
+  "runner.path": "tests/src/Benchmark",
+  "runner.iterations": 20,
+  "runner.revs": 1000,
+  "runner.retry_threshold": 5,
+  "runner.output_mode": "time",
+  "runner.time_unit": "microseconds",
+  "runner.progress": "blinken",
+  "runner.php_disable_ini": true,
+  "runner.php_env": {
+    "ENV XDEBUG_MODE": "off"
+  },
+  "report.generators": {
+    "time": {
+      "extends": "aggregate",
+      "title": "The Consummation of Time",
+      "description": "Benchmark how long it takes to consume time",
+      "cols": [ "subject", "mode" ]
+    }
+  },
+  "report.outputs": {
+    "docs": {
+      "renderer": "html",
+      "path": "docs/benchmarks/index.html",
+      "title": "All Your Benchmark Are Belong to Us"
+    }
+  },
+  "storage.xml_storage_path": "docs/benchmarks/refs"
+}

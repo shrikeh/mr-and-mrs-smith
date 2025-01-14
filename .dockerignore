@@ -1,0 +1,10 @@
+*
+!/dev/docker/services/app/templates
+!/app
+/app/bin/rr
+!/.rr.yaml
+
+!/.env
+!/composer.*
+!/auth.json.bak
+!/data

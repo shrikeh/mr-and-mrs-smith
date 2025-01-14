@@ -1,0 +1,67 @@
+grumphp:
+  extensions:
+    - Tests\GrumPHP\Extension\PhpBench
+  parallel:
+    enabled: false
+  tasks:
+    composer:
+      file: ./composer.json
+      no_check_all: false
+      no_check_lock: false
+      no_check_publish: false
+      no_local_repository: false
+      with_dependencies: false
+      strict: true
+    composer_normalize:
+      indent_size: 2
+      indent_style: space
+      no_check_lock: false
+      no_update_lock: false
+      verbose: false
+    phpcs:
+      standard: 
+        - Shrikeh
+      severity: ~
+      error_severity: ~
+      warning_severity: ~
+      tab_width: ~
+      report: full
+      triggered_by: [php]
+      show_sniffs_error_path: true
+    phpunit:
+      config_file: ~
+      testsuite: ~
+      group: [ ]
+      exclude_group: [ ]
+      always_execute: false
+      order: null
+      coverage-clover: null
+      coverage-html: null
+      coverage-php: null
+      coverage-xml: null
+    infection:
+      threads: ~
+      test_framework: ~
+      only_covered: false
+      show_mutations: true
+      verbose: true
+      configuration: ~
+      min_msi: 80
+      min_covered_msi: 80
+      mutators: []
+      ignore_patterns: []
+      triggered_by: [php]
+    phpbench: ~
+    phpmnd:
+      directory: .
+      whitelist_patterns: []
+      exclude: []
+      exclude_name: []
+      exclude_path: []
+      extensions: []
+      hint: false
+      ignore_funcs: []
+      ignore_numbers: []
+      ignore_strings: []
+      strings: false
+      triggered_by: ['php']

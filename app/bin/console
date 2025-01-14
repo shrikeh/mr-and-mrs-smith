@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+use Api\Http\Kernel;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+
+defined('TILLO_ROOT_DIR_LEVELS') || define('TILLO_ROOT_DIR_LEVELS', 2);
+
+defined('TILLO_ROOT_DIR') || define('TILLO_ROOT_DIR', dirname(__DIR__, GARGAUTH_ROOT_DIR_LEVELS));
+
+if (!is_dir(TILLO_ROOT_DIR.'/vendor')) {
+    throw new LogicException('Dependencies are missing. Try running "composer install".');
+}
+
+if (!is_file(TILLO_ROOT_DIR.'/vendor/autoload_runtime.php')) {
+    throw new LogicException('Symfony Runtime is missing. Try running "composer require symfony/runtime".');
+}
+
+require_once dirname(__DIR__, TILLO_ROOT_DIR).'/vendor/autoload_runtime.php';
+
+return function (array $context) {
+    $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+
+    return new Application($kernel);
+};

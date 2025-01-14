@@ -1,0 +1,19 @@
+---
+services:
+  app:
+    build:
+      target: local
+    environment:
+      - "XDEBUG_SESSION=1"
+      - "APP_CACHE_DIR=/tillo/build/var"
+    volumes:
+      - ./:/main
+    ports:
+      - target: 8080
+        published: 9901
+        protocol: tcp
+
+      # Xdebug
+      - target: 9003
+        published: 9003
+        protocol: tcp

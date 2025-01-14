@@ -1,0 +1,7 @@
+---
+authenticate_consumer_key:
+  path: /calculate
+  controller: Api\Http\Action\Calculate
+  methods:
+    - GET
+    - HEAD
