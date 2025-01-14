@@ -26,7 +26,7 @@ The application runs from the `/app` directory, with `/tests` and `/vendor` sepa
 
 * `Api` for the actual application interface (in this case, HTTP).
 * `App` for the application itself, which is based on *Commands* and *Queries*. This design pattern immediately allows splitting the application up with Command Query Responsibility Segregation (CQRS).
-* `Infra`, which is where implementation specifics of business logic is written (in this example, the JSON repository, calculator and similar implementations of business concepts such as `Amount`).
+* `Infra`, which is where implementation specifics of business logic is written (in this example, the calculator and number implementation using the `brick/math` package.
 * `MrAndMrsSmith`, which contains a slightly contrived effort at business domain logic.
 
 Corresponding unit tests are in `tests/src/Unit`. Were there time for Behavioural Driven Development (BDD), they would live in `tests/src/Feature`.
