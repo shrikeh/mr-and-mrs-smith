@@ -18,7 +18,7 @@ So, the things I focussed on demonstrating:
 
 ## Style and Architecture
 
-The test is written as a Command Bus-led application in PHP 8.3 and Symfony. To avoid local development host requirements, it runs in a Docker container, which will be built on first run. Tests similarly will run inside the container. The app combines several concepts, including Domain-Driven Design (DDD) and Action Domain Responder (ADR)
+The test is written as a Query Bus-led application in PHP 8.3 and Symfony. To avoid local development host requirements, it runs in a Docker container, which will be built on first run. Tests similarly will run inside the container. The app combines several concepts, including Domain-Driven Design (DDD) and Action Domain Responder (ADR)
 
 ### Architecture
 
