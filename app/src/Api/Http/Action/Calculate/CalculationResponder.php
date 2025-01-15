@@ -26,7 +26,6 @@ use Twig\Environment;
  */
 final readonly class CalculationResponder implements HttpResponder
 {
-
     public function __construct(private Environment $twig)
     {
     }

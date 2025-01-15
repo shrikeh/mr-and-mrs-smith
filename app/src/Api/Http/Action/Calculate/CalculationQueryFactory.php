@@ -34,7 +34,6 @@ use ValueError;
  */
 final readonly class CalculationQueryFactory implements HttpQueryFactory
 {
-
     public function __construct(
         private CorrelationFactory $correlationFactory,
         private NumberFactory $numberFactory,

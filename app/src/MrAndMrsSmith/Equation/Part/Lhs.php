@@ -22,5 +22,4 @@ use MrAndMrsSmith\TechTest\Equation\Part;
  */
 interface Lhs extends Part
 {
-
 }

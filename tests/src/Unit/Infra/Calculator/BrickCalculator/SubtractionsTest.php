@@ -21,7 +21,6 @@ use PHPUnit\Framework\TestCase;
  */
 final class SubtractionsTest extends TestCase
 {
-
     private BrickCalculator $calculator;
 
     protected function setUp(): void

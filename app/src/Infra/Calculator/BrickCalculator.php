@@ -22,7 +22,6 @@ use MrAndMrsSmith\TechTest\Calculator\FloatingPointCalculator;
  */
 final readonly class BrickCalculator implements FloatingPointCalculator
 {
-
     public const int DEFAULT_SCALE = 6;
     public const RoundingMode DEFAULT_ROUNDING_MODE = RoundingMode::UP;
 
@@ -30,7 +29,6 @@ final readonly class BrickCalculator implements FloatingPointCalculator
         private int $scale = self::DEFAULT_SCALE,
         private RoundingMode $roundingMode = self::DEFAULT_ROUNDING_MODE
     ) {
-
     }
 
     public function add(string $augend, string $addend): string

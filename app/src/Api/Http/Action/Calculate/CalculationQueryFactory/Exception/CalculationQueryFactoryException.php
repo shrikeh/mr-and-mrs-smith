@@ -21,5 +21,4 @@ use Throwable;
  */
 interface CalculationQueryFactoryException extends HttpMessageFactoryException
 {
-
 }

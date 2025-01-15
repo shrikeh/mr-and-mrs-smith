@@ -24,6 +24,5 @@ final readonly class Equation
 {
     public function __construct(public Number $first, public Number $second, public Operand $operand)
     {
-
     }
 }

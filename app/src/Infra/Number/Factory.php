@@ -22,7 +22,6 @@ use MrAndMrsSmith\TechTest\Equation\Part;
  */
 final readonly class Factory implements NumberFactory
 {
-
     public function create(mixed $value, Part $part): Number
     {
         return Brick::create($value, $part);

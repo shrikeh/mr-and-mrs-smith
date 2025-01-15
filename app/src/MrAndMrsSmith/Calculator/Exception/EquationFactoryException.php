@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace MrAndMrsSmith\TechTest\Calculator\Exception;
 
-
 use Throwable;
 
 /**
@@ -21,5 +20,4 @@ use Throwable;
  */
 interface EquationFactoryException extends Throwable
 {
-
 }

@@ -20,5 +20,4 @@ use Throwable;
  */
 interface NumberException extends Throwable
 {
-
 }

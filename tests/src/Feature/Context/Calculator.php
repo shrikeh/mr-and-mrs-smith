@@ -14,12 +14,10 @@ declare(strict_types=1);
 namespace Tests\Feature\Context;
 
 use Behat\Behat\Context\Context;
-
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Step\Given;
 use Behat\Step\When;
 use Behat\Step\Then;
-
 use MrAndMrsSmith\TechTest\Calculator as SmithCalculator;
 
 /**
@@ -27,7 +25,6 @@ use MrAndMrsSmith\TechTest\Calculator as SmithCalculator;
  */
 final readonly class Calculator implements Context
 {
-
     private SMithCalculator $calculator;
     public function __construct()
     {

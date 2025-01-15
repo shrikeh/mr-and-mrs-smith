@@ -7,6 +7,6 @@
     <arg name="extensions" value="php"/>
     <rule ref="Shrikeh" />
     <file>tests</file>
-    <file>src</file>
+    <file>app/src</file>
     <exclude>tests/app</exclude>
 </ruleset>

@@ -24,6 +24,5 @@ final readonly class Calculation
         public Equation $equation,
         public Number $number,
     ) {
-
     }
 }
